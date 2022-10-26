@@ -1,4 +1,4 @@
-CFLAGS = -Werror -Wall -g -fsanitize=address undefined
+CFLAGS = -Werror -Wall -g -fsanitize=address, undefined
 
 run: task2
 	./task2
