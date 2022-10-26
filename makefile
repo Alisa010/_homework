@@ -8,7 +8,7 @@ main.o: main.cpp str.h
 	g++ -c main.cpp -o main.o
 
 str.o: str.cpp str.h
-	g++ -c str.cpp -o main.o
+	g++ -c str.cpp -o str.o
 
 clean:
 	rm *.o task2
