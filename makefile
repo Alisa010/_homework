@@ -1,14 +1,16 @@
+CFLAGS = -Werror -Wall -g -fsanitize=address undefined
+
 run: task2
-	./task2
+        ./task2
 
 task2: main.o str.o
-	g++ main.o str.o -o task2
+        g++ ${FLAGS} main.o str.o -o task2
 
 main.o: main.cpp str.h
-	g++ -c main.cpp -o main.o
+        g++ ${FLAGS} -c main.cpp -o main.o 
 
 str.o: str.cpp str.h
-	g++ -c str.cpp -o str.o
+        g++ ${FLAGS} -c str.cpp 
 
 clean:
-	rm *.o task2
+        rm *.o task2
